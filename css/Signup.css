@@ -1,49 +1,58 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000428;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #004e92, #000428);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #004e92, #000428);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0;
-  padding: 5% 15%;
   font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  max-height: 100vh; /* Limit body's height to the viewport height */
+  max-width: 100%; /* Limit body's width to the viewport width */
+  overflow: auto; /* Add scrollbars if needed */
 }
 
-
-.login-text {
+.topLogo {
+  grid-row: 1/3;
+  grid-column: 5/7;
   text-align: center;
-  padding-bottom: 50px;
-  color: #fff;
+  align-self: flex-end;
 }
 
-span{
-  text-align: center;
-  z-index: 1;
+.logoPic {
+  width: 15vh;
 }
+
 
 .container {
-  padding: 3% 35%;
+  grid-row: 4/9;
+  grid-column: 4/8;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  align-content: space-between;
 }
 
-.logo {
-  max-width: 10%;
-  padding-bottom: 30px;
-  height: auto;
-  text-align: center;
+.login-text {
+  color: #fff;
+  margin-bottom: 30px;
 }
+
 
 .kp-input-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  width: 100%;
-  height: auto;
-  position: relative;
+  margin-bottom: 20px;
 }
 
-.mrgn{
-  margin-bottom: 80px;
+.mrgn {
+  margin-bottom: 40px;
 }
 
 .kp-input-wrap .kp-input-label {
@@ -69,22 +78,18 @@ span{
   background: none;
   transition: all 0.3s ease;
   color: #fff;
-  padding-left: 10px;
 }
 
-.forgot{
+.forgot {
   color: #c0c0c0;
   margin-top: 10px;
   margin-left: 2px;
   font-size: 0.9rem;
 }
 
-
-.forgot:hover{
+.forgot:hover {
   color: #cfd3db;
 }
-
-
 
 .circles {
   position: absolute;
@@ -92,7 +97,7 @@ span{
   left: 0;
   margin-bottom: 0;
   width: 100%;
-  height: 860px;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -199,7 +204,6 @@ span{
 .glow-on-hover {
     width: 310px;
     height: 50px;
-    margin-right: 9px;
     border-style: solid;
     border-color: #fff;
     color: #fff;
