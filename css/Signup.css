@@ -284,3 +284,12 @@ h4{
   padding-top: 30px;
   padding-bottom: 20px;
 }
+
+@media (max-width: 840px) {
+  .topLogo {
+    grid-column: 1/11;
+  }
+  .container {
+    grid-column: 1/11;
+  }
+}
