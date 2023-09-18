@@ -94,7 +94,7 @@ body {
 }
 
 
-.area{
+.area {
   z-index: -2;
 }
 
@@ -300,4 +300,13 @@ h4 {
   text-align: center;
   color: #c0c0c0;
   padding-top: 30px;
+}
+
+@media (max-width: 840px) {
+  .topLogo {
+    grid-column: 1/11;
+  }
+  .container {
+    grid-column: 1/11;
+  }
 }
